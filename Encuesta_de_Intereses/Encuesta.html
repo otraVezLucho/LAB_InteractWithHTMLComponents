@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="encuentaStyle.css">
+    </head>
+    <body>
+        <div id="disenio">
+            <h2>Diseño Web</h2>
+            <p>Cantidad Votos: <span id="numVotos">0</span></p>
+            <button id="disenioB" onclick="conteoDisenio()">Votar</button>
+        </div>
+
+        <div id="baseDatos">
+            <H2> Base de Datos</H2>
+            <p>Cantidad Votos: <span id="numVotosBd">0</span> </p>
+            <button id="bdB" onclick="conteoBd()">Votar</button>
+        </div>
+
+        <div id="JavaScript">
+            <h2>Java Script</h2>
+            <p>Cantidad Votos: <span id="numVotosJs">0</span></p>
+            <button id="jsB" onclick="conteoJs()">Votar</button>
+        </div>
+        <script src="encuesta.js"></script>
+    </body>
+</html>
