@@ -1,0 +1,24 @@
+div{
+    width: 200px;
+    height: 250px;
+    border: 1PX solid #000;
+    border-radius: 20px;
+    margin: 5px;
+    background: linear-gradient(45deg, #50493d, #0f2c15);
+}
+
+.image{
+    height: 60%;
+    margin: 23px;
+    border-radius: 20px;
+    
+}
+button{
+    background-color: transparent;
+    height: 40px;
+    width: 50px;
+    border-radius: 20px;
+    margin-left: 120px;
+    margin-bottom: 30px;
+    border: 1px solid #b3d325;
+}
