@@ -23,6 +23,11 @@ const preciop1 = 28;
 const preciop2 = 22;
 const preciop3 = 30;
 
+let total1 = 0;
+let total2 = 0;
+let total3 = 0;
+
+
 document.getElementById("precioP1").innerHTML = preciop1;
 
 document.getElementById("precioP2").innerHTML = preciop2;
@@ -31,27 +36,22 @@ document.getElementById("precioP3").innerHTML = preciop3;
 
 function agregarP1() {
     contadorp1++;
-    let total = preciop1 * contadorp1;
-    document.getElementById("total-items").innerHTML = total;
+    total1 = preciop1 * contadorp1;
+    document.getElementById("total-itemsP1").innerHTML = total1;
     document.getElementById("unidadesP1").innerHTML = contadorp1;
 }
 function agregarP2() {
     contadorp2++;
-    let total = preciop2 * contadorp2;
-    document.getElementById("total-items").innerHTML = total;
+    total2 = preciop2 * contadorp2;
+    document.getElementById("total-itemsP2").innerHTML = total2;
     document.getElementById("unidadesP2").innerHTML = contadorp2;
 }
 function agregarP3() {
     contadorp3++;
-    let total = preciop3 * contadorp3;
-    document.getElementById("total-items").innerHTML = total;
+    total3 = preciop3 * contadorp3;
+    document.getElementById("total-itemsP3").innerHTML = total3;
     document.getElementById("unidadesP3").innerHTML = contadorp3;
 }
 
-class producto {
-    constructor(nombre, cantidad, precio) {
-        this.nombre = nombre;
-        this.cantidad = cantidad;
-        this.precio = precio;
-    }
-}
+let granTotal = total1 + total2 + total3; 
+document.getElementById("total-precio").innerHTML = granTotal;
