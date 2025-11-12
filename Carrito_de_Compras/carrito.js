@@ -26,7 +26,7 @@ const preciop3 = 30;
 let total1 = 0;
 let total2 = 0;
 let total3 = 0;
-let granTotal =0;
+let granTotal = 0;
 
 document.getElementById("precioP1").innerHTML = preciop1;
 
@@ -41,7 +41,7 @@ function agregarP1() {
     document.getElementById("total-itemsP1").innerHTML = total1;
     document.getElementById("unidadesP1").innerHTML = contadorp1;
     console.log(`Unidades producto 1: ${contadorp1} total: $${total1}`);
-    
+
 }
 function agregarP2() {
     contadorp2++;
@@ -49,7 +49,7 @@ function agregarP2() {
     actualizarGranTotal();
     document.getElementById("total-itemsP2").innerHTML = total2;
     document.getElementById("unidadesP2").innerHTML = contadorp2;
-    
+
 }
 function agregarP3() {
     contadorp3++;
@@ -57,18 +57,33 @@ function agregarP3() {
     actualizarGranTotal();
     document.getElementById("total-itemsP3").innerHTML = total3;
     document.getElementById("unidadesP3").innerHTML = contadorp3;
-    
+
 }
-function actualizarGranTotal(){
+function actualizarGranTotal() {
     granTotal = total1 + total2 + total3;
     document.getElementById("total-precio").innerHTML = granTotal;
-    if(granTotal >= 50){alert("¡Envío gratis aplicado!")}
+    if (granTotal >= 50) { alert("¡Envío gratis aplicado!") }
+}
+function borrarTodo() {
+    granTotal = 0;
+    total1 = 0;
+    total2 = 0;
+    total3 = 0;
+    contadorp1 = 0;
+    contadorp2 = 0;
+    contadorp3 = 0;
+    document.getElementById("total-precio").innerHTML = granTotal;
+    document.getElementById("total-itemsP1").innerHTML = total1;
+    document.getElementById("total-itemsP2").innerHTML = total2;
+    document.getElementById("total-itemsP3").innerHTML = total3;
+    document.getElementById("unidadesP1").innerHTML = contadorp1;
+    document.getElementById("unidadesP2").innerHTML = contadorp2;
+    document.getElementById("unidadesP3").innerHTML = contadorp3;
 }
 
-  
 console.log(`cantidad producto 1: ${contadorp1} total: ${total1}`);
 console.log(`cantidad producto 2: ${contadorp2} total: ${total2}`);
 console.log(`cantidad producto 3: ${contadorp3} total: ${total3}`);
 
-console.log("Total Carrito: ",granTotal);
+console.log("Total Carrito: ", granTotal);
 

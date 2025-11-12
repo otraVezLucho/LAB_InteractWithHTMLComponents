@@ -5,11 +5,12 @@ html{
 }
 
 header{
+    display: flex;
     background: linear-gradient(45deg, #50493d, #0f2c15);
     height: 80px;
-    text-align: end;
-    align-content: center;
+    align-content: end;
     border-radius: 10px;
+    padding-left: 800px;
     
 }
 
@@ -19,6 +20,14 @@ header p{
     font-weight:bold;
     margin-right: 50px;
     
+}
+header button{
+    margin-top: 20px;
+    width: 200px;
+}
+header button:hover{
+    
+    width: 200px;
 }
 
 header #carritoIcon{
