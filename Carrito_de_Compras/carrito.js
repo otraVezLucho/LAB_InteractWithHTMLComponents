@@ -26,7 +26,7 @@ const preciop3 = 30;
 let total1 = 0;
 let total2 = 0;
 let total3 = 0;
-
+let granTotal =0;
 
 document.getElementById("precioP1").innerHTML = preciop1;
 
@@ -37,21 +37,38 @@ document.getElementById("precioP3").innerHTML = preciop3;
 function agregarP1() {
     contadorp1++;
     total1 = preciop1 * contadorp1;
+    actualizarGranTotal();
     document.getElementById("total-itemsP1").innerHTML = total1;
     document.getElementById("unidadesP1").innerHTML = contadorp1;
+    console.log(`Unidades producto 1: ${contadorp1} total: $${total1}`);
+    
 }
 function agregarP2() {
     contadorp2++;
     total2 = preciop2 * contadorp2;
+    actualizarGranTotal();
     document.getElementById("total-itemsP2").innerHTML = total2;
     document.getElementById("unidadesP2").innerHTML = contadorp2;
+    
 }
 function agregarP3() {
     contadorp3++;
     total3 = preciop3 * contadorp3;
+    actualizarGranTotal();
     document.getElementById("total-itemsP3").innerHTML = total3;
     document.getElementById("unidadesP3").innerHTML = contadorp3;
+    
+}
+function actualizarGranTotal(){
+    granTotal = total1 + total2 + total3;
+    document.getElementById("total-precio").innerHTML = granTotal;
+    if(granTotal >= 50){alert("¡Envío gratis aplicado!")}
 }
 
-let granTotal = total1 + total2 + total3; 
-document.getElementById("total-precio").innerHTML = granTotal;
+  
+console.log(`cantidad producto 1: ${contadorp1} total: ${total1}`);
+console.log(`cantidad producto 2: ${contadorp2} total: ${total2}`);
+console.log(`cantidad producto 3: ${contadorp3} total: ${total3}`);
+
+console.log("Total Carrito: ",granTotal);
+
