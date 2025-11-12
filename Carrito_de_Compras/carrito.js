@@ -79,11 +79,6 @@ function borrarTodo() {
     document.getElementById("unidadesP1").innerHTML = contadorp1;
     document.getElementById("unidadesP2").innerHTML = contadorp2;
     document.getElementById("unidadesP3").innerHTML = contadorp3;
+    alert("El carrito se ha vaciado!")
 }
-
-console.log(`cantidad producto 1: ${contadorp1} total: ${total1}`);
-console.log(`cantidad producto 2: ${contadorp2} total: ${total2}`);
-console.log(`cantidad producto 3: ${contadorp3} total: ${total3}`);
-
-console.log("Total Carrito: ", granTotal);
 
